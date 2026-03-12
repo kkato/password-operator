@@ -8,4 +8,14 @@ layout:
 - go.kubebuilder.io/v4
 projectName: password-operator
 repo: github.com/kkato/password-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: kkato.app
+  group: secret
+  kind: Password
+  path: github.com/kkato/password-operator/api/v1alpha1
+  version: v1alpha1
 version: "3"
