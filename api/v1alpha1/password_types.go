@@ -32,7 +32,6 @@ type PasswordSpec struct {
 
 	// foo is an example field of Password. Edit password_types.go to remove/update
 	// +optional
-	Foo *string `json:"foo,omitempty"`
 }
 
 // PasswordStatus defines the observed state of Password.
