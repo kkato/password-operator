@@ -22,6 +22,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
+	"sigs.k8s.io/controller-runtime/pkg/log"
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
 
 	secretv1alpha1 "github.com/kkato/password-operator/api/v1alpha1"
@@ -50,6 +51,9 @@ func (r *PasswordReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 	_ = logf.FromContext(ctx)
 
 	// TODO(user): your logic here
+	logger := log.FromContext(ctx)
+
+	logger.Info("Reconcile is called.")
 
 	return ctrl.Result{}, nil
 }
